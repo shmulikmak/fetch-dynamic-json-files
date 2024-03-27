@@ -1,0 +1,7 @@
+<a routerLink="/">Back to Home</a>
+<h2>File List</h2>
+<ul>
+  <li *ngFor="let file of files">
+    <a [routerLink]="['/files', file, 'tables']">{{ file }}</a>
+  </li>
+</ul>

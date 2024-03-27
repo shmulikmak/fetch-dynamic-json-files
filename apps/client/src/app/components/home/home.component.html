@@ -1,0 +1,12 @@
+<h1>Welcome to the App</h1>
+
+<h2>Available Requests</h2>
+<div class="request-list">
+  <div class="request-item" *ngFor="let request of requests">
+    <div>{{ request.name }}: </div>
+    <br>
+    <div>{{ request.route }}</div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

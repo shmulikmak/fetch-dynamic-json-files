@@ -1,0 +1,8 @@
+<a routerLink="/">Back to Home</a>
+<h2>Table Data for {{ selectedTable }} in {{ selectedFile }}</h2>
+<div *ngIf="tableData">
+  <p>Title: {{ tableData.title }}</p>
+  <p>Rows: {{ tableData.rows }}</p>
+  <p>Columns: {{ tableData.columns }}</p>
+  <p>Notes: {{ tableData.notes }}</p>
+</div>

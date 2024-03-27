@@ -1,0 +1,7 @@
+<a routerLink="/">Back to Home</a>
+<h2>Table List for {{ selectedFile }}</h2>
+<ul>
+  <li *ngFor="let table of tables">
+    <a [routerLink]="['/files', selectedFile, 'tables', table]">{{ table }}</a>
+  </li>
+</ul>

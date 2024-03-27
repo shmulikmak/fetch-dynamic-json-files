@@ -1,0 +1,26 @@
+.request-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.request-item {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.request-item:hover {
+  background-color: #e0e0e0;
+}
+
+.request-item a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
