@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -11,4 +12,6 @@ export class HomeComponent {
     { name: 'List of Tables', route: '/files/:file/tables' },
     { name: 'Table Information', route: '/files/:file/tables/:table' }
   ];
+
+  constructor(public router: Router) {}
 }

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+
 import { FileService } from '../../services/file.service';
+
+import { Table } from '../../models/table.model';
 
 @Component({
   selector: 'app-table-data',
@@ -10,7 +13,7 @@ import { FileService } from '../../services/file.service';
 export class TableDataComponent implements OnInit {
   selectedFile = '';
   selectedTable = '';
-  tableData: any;
+  tableData: Table | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -29,10 +32,10 @@ export class TableDataComponent implements OnInit {
     this.fileService
       .getTableData(this.selectedFile, this.selectedTable)
       .subscribe({
-        next: (data: any) => {
+        next: (data: Table) => {
           this.tableData = data;
         },
-        error: (error: any) => {
+        error: (error: Table) => {
           console.error('Error fetching table data:', error);
         }
       });
